@@ -13,7 +13,7 @@ const Home = () => {
   const [darkMode, setDarkMode]= useState(false)
   
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? 'dark' : ''}>
     <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900  dark:text-white'>
     <section className='min-h-screen'>
     <nav className='py-10 mb-12 flex justify-between'>
@@ -25,7 +25,7 @@ const Home = () => {
       <ul className='flex items-center'>
       <li className='flex flex-col'>
        <span className='animate-bounce'><FaArrowDown /></span>
-    <BsToggleOn onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl'/>
+    <BsToggleOn onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl relative'/>
     </li>
     <li className='hover:scale-110 duration-300'>
       <a className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full ml-8'
