@@ -6,6 +6,7 @@ import { useState } from 'react'
 import CookieBanner from './Cookies'
 import Typewriter from 'typewriter-effect'
 import { FaArrowDown} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,8 +29,8 @@ const Home = () => {
     <BsToggleOn onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl relative'/>
     </li>
     <li className='hover:scale-110 duration-300'>
-      <a className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full ml-8'
-       href="/resume">Resume</a>
+      <Link className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full ml-8'
+       to="/resume">Resume</Link>
     </li>
     </ul>
     </nav>

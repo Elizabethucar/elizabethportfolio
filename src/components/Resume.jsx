@@ -2,6 +2,7 @@ import { BsToggleOn } from 'react-icons/bs';
 import { useState } from 'react';
 import CookieBanner from './Cookies';
 import { FaHome, FaPhone, FaLinkedinIn, FaGithub, FaEnvelope ,FaArrowDown} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Resume = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,9 +11,9 @@ const Resume = () => {
     <div className={darkMode ? "dark" : ""}>
       <div className="min-h-screen bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 dark:text-white">
         <nav className="py-10 mb-12 flex justify-between">
-          <a href='/' className="text-xl font-burtons py-2 text-pink-700 font-semibold md:text-2xl">
+          <Link to='/' className="text-xl font-burtons py-2 text-pink-700 font-semibold md:text-2xl">
           Elizabeth's Portfolio
-          </a>
+          </Link>
           <CookieBanner className="" />
           <ul className="flex items-center">
             <li className='flex flex-col'>
