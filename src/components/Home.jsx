@@ -1,12 +1,13 @@
 
-// import { Link } from 'react-router-dom'
 import {BsToggleOn} from 'react-icons/bs'
 import {IoLogoLinkedin} from 'react-icons/io'
 import { useState } from 'react'
 import CookieBanner from './Cookies'
 import Typewriter from 'typewriter-effect'
 import { FaArrowDown} from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
+import { Link, animateScroll as scroll } from 'react-scroll'
+
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
   const [darkMode, setDarkMode]= useState(false)
   
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div name='top' className={darkMode ? 'dark' : ''}>
     <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900  dark:text-white'>
     <section className='min-h-screen'>
     <nav className='py-10 mb-12 flex justify-between'>
@@ -29,8 +30,8 @@ const Home = () => {
     <BsToggleOn onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl relative'/>
     </li>
     <li className='hover:scale-110 duration-300'>
-      <Link className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full ml-8'
-       to="/resume">Resume</Link>
+      <a className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full ml-8'
+       href="/resume">Resume</a>
     </li>
     </ul>
     </nav>
@@ -119,8 +120,9 @@ After graduating, I am excited to embark on my journey as a Frontend developer. 
 
         </p>
         <div className='flex justify-end '>
-        <a className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full  hover:scale-110 duration-300 mb-16'
-       href="/resume">Resume</a>
+        <Link className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full  hover:scale-110 duration-300 mb-16'
+       to="top" smooth={true} duration={500}>To The Top</Link>
+       
        </div>
   </div>
 </section>

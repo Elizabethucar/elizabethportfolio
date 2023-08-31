@@ -2,18 +2,20 @@ import { BsToggleOn } from 'react-icons/bs';
 import { useState } from 'react';
 import CookieBanner from './Cookies';
 import { FaHome, FaPhone, FaLinkedinIn, FaGithub, FaEnvelope ,FaArrowDown} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll'
+
 
 const Resume = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div name='top' className={darkMode ? "dark" : ""}>
       <div className="min-h-screen bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 dark:text-white">
         <nav className="py-10 mb-12 flex justify-between">
-          <Link to='/' className="text-xl font-burtons py-2 text-pink-700 font-semibold md:text-2xl">
+          <a href='/' className="text-xl font-burtons py-2 text-pink-700 font-semibold md:text-2xl">
           Elizabeth's Portfolio
-          </Link>
+          </a>
           <CookieBanner className="" />
           <ul className="flex items-center">
             <li className='flex flex-col'>
@@ -26,7 +28,7 @@ const Resume = () => {
             <li className="hover:scale-110 duration-300">
               <a
                 className="bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full ml-8 sm:max-w-[959px] inline-block"
-                href="/"
+                href='/'
               >
                 Back Home
               </a>
@@ -164,8 +166,8 @@ const Resume = () => {
         
           </div>
           <div className='flex justify-end relative'>
-        <a className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full  hover:scale-110 duration-300 '
-       href="/">Back Home</a>
+        <Link className='bg-gradient-to-r from-pink-400 to-pink-800 text-white px-4 py-2 rounded-full  hover:scale-110 duration-300 '
+       to="top" smooth={true} duration={500}>To The Top</Link>
        </div>
         </div>
       </div>
